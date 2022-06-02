@@ -10,11 +10,12 @@ import '../models/stream_game_finished.dart';
 import '../models/available_room_model.dart';
 import 'package:rxdart/rxdart.dart';
 import '../apis/quiz_api.dart';
+import '../env_constants.dart';
 
 class MultiplayerSocket with ChangeNotifier {
   bool isConnected = false;
   IO.Socket socket = IO.io(
-    'https://quiz-it-api.herokuapp.com',
+    SOCKET_URL,
     IO.OptionBuilder()
         .setTransports(['websocket'])
         .disableAutoConnect()
