@@ -173,5 +173,8 @@ class MultiplayerSocket with ChangeNotifier {
       isConnected = false;
       notifyListeners();
     });
+
+    socket.onError((data) => print(data));
+    socket.onConnectError((data) => print(data));
   }
 }

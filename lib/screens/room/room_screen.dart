@@ -28,13 +28,13 @@ class _RoomScreenState extends State<RoomScreen> with WidgetsBindingObserver {
     } else {
       qp.isHost = false;
     }
-    WidgetsBinding.instance?.addObserver(this);
+    WidgetsBinding.instance.addObserver(this);
     super.initState();
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance?.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
     super.dispose();
   }
 
